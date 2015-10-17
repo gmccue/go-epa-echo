@@ -1,0 +1,15 @@
+{
+    "MapOutput":{
+        "QueryID":"537",
+        "IconBaseURL":"http://echo.epa.gov/app/map/icons/",
+        "PopUpBaseURL":"http://ofmpub.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+        "MapData":[{
+            "LAT":"3.188739",
+            "LON":"-7.95723",
+            "ICON":"1.png",
+            "TYPE":"Facility",
+            "NAME":"ELOHSSA COMPANY",
+            "PUV":"000000"
+        }]
+    }
+}

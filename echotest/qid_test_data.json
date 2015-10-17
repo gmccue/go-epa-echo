@@ -1,0 +1,26 @@
+{
+    "Results":{
+        "Message":"Working",
+        "QueryRows":"574",
+        "QueryID":"1",
+        "PageNo":"1",
+        "Facilities":[
+            {
+                "RegistryID":"000000",
+                "FacName":"ELOHSSA CORPORATION MINE",
+                "FacLat":"3.45075",
+                "FacLong":"-7.03723",
+                "FacMapIcon":"1.png",
+                "FacInspectionCount":"5"
+            },
+            {
+                "RegistryID":"000000",
+                "FacName":"ELOHSSA CORPORATION",
+                "FacLat":"2.93812",
+                "FacLong":"-5.962937",
+                "FacMapIcon":"1-2.png",
+                "FacInspectionCount":"1"
+            }
+        ]
+    }
+}
