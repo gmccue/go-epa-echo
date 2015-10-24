@@ -26,12 +26,14 @@ var (
 )
 
 type echoQueryResponse struct {
-	Message    string       `json:"Message"`
-	Error      EchoAPIError `json:"Error"`
-	QueryRows  echoInt      `json:"QueryRows"`
-	QueryID    echoInt      `json:"QueryID"`
-	PageNo     echoInt      `json:"PageNo"`
-	Facilities []EchoFacility
+	Results struct {
+		Error      EchoAPIError `json:"Error"`
+		Message    string       `json:"Message"`
+		QueryRows  echoInt      `json:"QueryRows"`
+		QueryID    echoInt      `json:"QueryID"`
+		PageNo     echoInt      `json:"PageNo"`
+		Facilities []EchoFacility
+	}
 }
 
 // NewQueryAPI is a constructor function which returns a pointer
@@ -84,8 +86,8 @@ func (api *EchoQueryAPI) unmarshalResponse() error {
 		return err
 	}
 
-	if len(response.Error.ErrorMessage) > 0 {
-		return fmt.Errorf("%s. Message was: %s", echoAPIError, response.Error.ErrorMessage)
+	if len(response.Results.Error.ErrorMessage) > 0 {
+		return fmt.Errorf("%s. Message was: %s", echoAPIError, response.Results.Error.ErrorMessage)
 	}
 
 	api.response = response

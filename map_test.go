@@ -6,7 +6,7 @@ import (
 )
 
 func TestUnmarshalMaps(t *testing.T) {
-	dataMock, err := ioutil.ReadFile("./echoTest/map_test_data.json")
+	dataMock, err := ioutil.ReadFile("./echotest/map_test_data.json")
 	if err != nil {
 		t.Error(err)
 	}
@@ -20,7 +20,7 @@ func TestUnmarshalMaps(t *testing.T) {
 	}
 
 	if api.response.MapOutput.QueryID != "537" {
-		t.Error("Invalid success message.")
+		t.Error("Invalid QueryID.")
 	}
 
 	if len(api.response.MapOutput.MapData) != 1 {

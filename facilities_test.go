@@ -15,7 +15,7 @@ func TestSetInvalidQueryParam(t *testing.T) {
 }
 
 func TestUnmarshalFacilities(t *testing.T) {
-	dataMock, err := ioutil.ReadFile("./echoTest/facilities_test_data.json")
+	dataMock, err := ioutil.ReadFile("./echotest/facilities_test_data.json")
 	if err != nil {
 		t.Error(err)
 	}
